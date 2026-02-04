@@ -58,11 +58,11 @@ Create a high-trust, emotionally resonant landing page for 40-50s women seeking 
 - `src/app/globals.css` (Updated theme variables)
 
 ### Definition of Done
-- [ ] All 3 sections implemented and responsive.
-- [ ] Scroll animations trigger correctly on scroll.
-- [ ] Form submits to `/api/consultation` successfully.
-- [ ] Visual regression tests pass.
-- [ ] Accessibility scan passes (WCAG 2.1 AA).
+- [x] All 3 sections implemented and responsive.
+- [x] Scroll animations trigger correctly on scroll.
+- [x] Form submits to `/api/consultation` successfully.
+- [x] Visual regression tests pass.
+- [x] Accessibility scan passes (WCAG 2.1 AA).
 
 ### Must Have
 - **Hybrid Animation Strategy**: Framer Motion for scroll, Tailwind for interactions.

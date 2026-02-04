@@ -3,10 +3,6 @@ import AxeBuilder from '@axe-core/playwright';
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 
-/**
- * Scenario 1: Form Submission (API Integration)
- * Tests successful form submission with privacy agreement
- */
 test.describe('Form Submission Flow', () => {
   test('should successfully submit consultation form', async ({ page }) => {
     await page.goto(BASE_URL);
@@ -44,10 +40,6 @@ test.describe('Form Submission Flow', () => {
   });
 });
 
-/**
- * Scenario 2: Scroll Animation Trigger
- * Tests that Story section reveals correctly on scroll
- */
 test.describe('Scroll Animation', () => {
   test('should reveal Story section content on scroll', async ({ page }) => {
     await page.goto(BASE_URL);
@@ -83,10 +75,6 @@ test.describe('Scroll Animation', () => {
   });
 });
 
-/**
- * Scenario 3: Mobile Responsiveness
- * Tests layout adaptation on mobile viewport (375px)
- */
 test.describe('Mobile Layout', () => {
   test('should adapt layout for mobile viewport', async ({ page }) => {
     // Set mobile viewport
@@ -118,6 +106,12 @@ test.describe('Mobile Layout', () => {
     const bodyWidth = await page.evaluate(() => document.body.scrollWidth);
     expect(bodyWidth).toBeLessThanOrEqual(375);
     
+    // Visual regression check for mobile
+    await expect(page).toHaveScreenshot('landing-mobile.png', {
+      fullPage: true,
+      mask: [page.locator('.animate-spin')] // Mask any loading spinners
+    });
+    
     // Take screenshot
     await page.screenshot({ 
       path: '.sisyphus/evidence/mobile-layout.png',
@@ -126,10 +120,22 @@ test.describe('Mobile Layout', () => {
   });
 });
 
-/**
- * Accessibility Scan
- * Uses AXE to check for WCAG 2.1 AA violations
- */
+test.describe('Visual Regression', () => {
+  test('should match desktop baseline', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 });
+    await page.goto(BASE_URL);
+    await page.waitForLoadState('networkidle');
+    
+    // Wait for initial animations
+    await page.waitForTimeout(2000);
+    
+    await expect(page).toHaveScreenshot('landing-desktop.png', {
+      fullPage: true,
+      mask: [page.locator('.animate-spin')]
+    });
+  });
+});
+
 test.describe('Accessibility', () => {
   test('should have no accessibility violations (WCAG 2.1 AA)', async ({ page }) => {
     await page.goto(BASE_URL);
