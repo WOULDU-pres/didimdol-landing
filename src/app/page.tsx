@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Hero } from "@/components/sections/Hero";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -38,8 +39,10 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100">
-      <section className="relative min-h-screen flex flex-col">
+    <main className="min-h-screen">
+      <Hero />
+      
+      <section id="contact" className="relative min-h-screen flex flex-col bg-gradient-to-b from-slate-50 via-white to-slate-100">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent" />
         
         <div className="relative z-10 flex-1 flex flex-col px-6 py-12 max-w-lg mx-auto w-full">

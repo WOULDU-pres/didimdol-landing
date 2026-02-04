@@ -182,51 +182,9 @@ Wave 3 (Integration & Cleanup):
   **Commit**: YES
   - Message: `chore(setup): install deps and setup design system`
 
-- [ ] 2. Implement Hero Section Component
-
-  **What to do**:
-  - Create `src/components/sections/Hero.tsx`.
-  - Layout: Full height (`min-h-screen`), centered content.
-  - Content: Headline "무거운 짐, 함께 내려놓겠습니다", Subtext, Placeholder Image (Bubmusa).
-  - Styling: Beige background, Serif headline (Navy), image with soft shadow.
-
-  **Recommended Agent Profile**:
-  - **Category**: `visual-engineering`
-  - **Skills**: [`frontend-design`, `web-design-guidelines`]
-
-  **Acceptance Criteria**:
-  - [ ] Component renders without errors
-  - [ ] Headline uses Serif font class
-  - [ ] Screenshot evidence: `.sisyphus/evidence/hero-component.png`
-
-  **Commit**: YES
-  - Message: `feat(ui): implement hero section`
-
-- [ ] 3. Implement Story Section with Scroll Animations
-
-  **What to do**:
-  - Create `src/components/sections/Story.tsx`.
-  - Content: Use the extracted Korean text (Headline + Body).
-  - Layout: Split view (Photo left/right, Text opposite) or vertical on mobile.
-  - Animation: Use `<motion.div>` with `initial={{ opacity: 0, y: 20 }}` and `whileInView={{ opacity: 1, y: 0 }}`.
-  - Config: `viewport={{ once: true, amount: 0.3 }}`.
-
-  **Must NOT do**:
-  - Use `type: spring` (use `ease: "easeOut", duration: 0.8`).
-
-  **Recommended Agent Profile**:
-  - **Category**: `visual-engineering`
-  - **Skills**: [`frontend-design`, `vercel-react-best-practices`]
-
-  **Acceptance Criteria**:
-  - [ ] Text matches the provided story script exactly
-  - [ ] Animation triggers only once on scroll
-  - [ ] Screenshot evidence: `.sisyphus/evidence/story-component.png`
-
-  **Commit**: YES
-  - Message: `feat(ui): implement story section with animations`
-
-- [ ] 4. Implement Contact Section (Form Logic)
+- [x] 2. Implement Hero Section Component
+- [x] 3. Implement Story Section with Scroll Animations
+- [x] 4. Implement Contact Section (Form Logic)
 
   **What to do**:
   - Create `src/components/sections/Contact.tsx`.
