@@ -57,12 +57,13 @@ export function Story() {
           <div className="space-y-10">
             <motion.h2
               variants={itemVariants}
-              className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight"
+              className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.2] tracking-tight"
               style={{ color: 'var(--noble-navy)' }}
             >
               <span className="block">다시 일어서려는</span>
-              <span className="block mt-2">당신의 간절한 손을</span>
-              <span className="block mt-2 text-4xl md:text-5xl lg:text-6xl">디딤돌 법무사가 잡겠습니다.</span>
+              <span className="block mt-1 md:mt-2">당신의 간절한 손을</span>
+              <span className="block mt-1 md:mt-2">디딤돌 법무사가</span>
+              <span className="block mt-1 md:mt-2">잡겠습니다.</span>
             </motion.h2>
 
             <motion.div variants={itemVariants} className="space-y-6 md:space-y-8">
