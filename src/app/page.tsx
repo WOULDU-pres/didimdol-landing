@@ -5,8 +5,8 @@ import { Contact } from "@/components/sections/Contact";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Hero />
       <Story />
+      <Hero />
       <Contact />
     </main>
   );

@@ -126,7 +126,7 @@ export function Contact() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg text-muted-foreground max-w-xl mx-auto"
             >
-              전문 상담사가 24시간 내 연락드립니다.
+              법무사가 직접 24시간 내 연락드립니다.
               <br />
               부담 없이 문의해주세요.
             </motion.p>

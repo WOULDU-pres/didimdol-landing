@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useReducedMotion, Variants } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 export function Story() {
   const shouldReduceMotion = useReducedMotion();
@@ -29,7 +30,7 @@ export function Story() {
   };
 
   return (
-    <section className="relative min-h-screen bg-white py-24 md:py-32 lg:py-40">
+    <section className="relative min-h-screen bg-noble-beige py-24 md:py-32 lg:py-40">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
           className="absolute top-20 right-0 w-1/3 h-1/3 opacity-[0.03]"
@@ -52,58 +53,37 @@ export function Story() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 items-center">
-          <div className="lg:col-span-7 space-y-10">
+        <div className="max-w-4xl">
+          <div className="space-y-10">
             <motion.h2
               variants={itemVariants}
-              className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.15] tracking-tight"
+              className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight"
               style={{ color: 'var(--noble-navy)' }}
             >
-              진중한 당신의 손을 잡을{' '}
-              <span className="block mt-2 md:mt-3">준비가 되어있습니다.</span>
+              <span className="block">다시 일어서려는</span>
+              <span className="block mt-2">당신의 간절한 손을</span>
+              <span className="block mt-2 text-4xl md:text-5xl lg:text-6xl">디딤돌 법무사가 잡겠습니다.</span>
             </motion.h2>
 
             <motion.div variants={itemVariants} className="space-y-6 md:space-y-8">
               <p
-                className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light opacity-90"
-                style={{ 
-                  color: 'var(--noble-navy)',
-                  lineHeight: '1.8',
-                }}
+                className="text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed text-noble-navy"
+                style={{ lineHeight: '1.6' }}
               >
-                많은 의뢰인들이 물어봅니다. 사람과산재에 맡기면 이겨줄 수 있냐고?
+                &quot;정말 빚에서 벗어날 수 있을까요?&quot;
               </p>
 
-              <p
-                className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light opacity-90"
-                style={{ 
-                  color: 'var(--noble-navy)',
-                  lineHeight: '1.8',
-                }}
-              >
-                네. 반드시 이겨드리겠습니다. 저희는 이기지 못할 사건은 처음부터 수임하지 않습니다. 
-                &apos;사람과산재가 이기지 못한다면 어느 누구도 이 사건은 이길 수 없다&apos;는 저희들만의 신념이 있습니다.
+              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-muted-foreground" style={{ lineHeight: '1.8' }}>
+                수많은 의뢰인이 떨리는 목소리로 질문하십니다.<br />
+                저희의 대답은 언제나 <span className="font-bold text-noble-navy text-2xl md:text-3xl">&apos;네&apos;</span>입니다.
               </p>
 
-              <p
-                className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light opacity-90"
-                style={{ 
-                  color: 'var(--noble-navy)',
-                  lineHeight: '1.8',
-                }}
-              >
-                그렇다면 사람과산재는 한 번도 진 적이 없나요?
+              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-muted-foreground" style={{ lineHeight: '1.8' }}>
+                저희는 책임질 수 없는 약속을 남발하지 않습니다. 수임 전 철저한 분석을 통해 가능성을 검토하며, 저희가 맡은 이상 반드시 결과로 증명합니다.
               </p>
 
-              <p
-                className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light opacity-90"
-                style={{ 
-                  color: 'var(--noble-navy)',
-                  lineHeight: '1.8',
-                }}
-              >
-                있습니다. 저희도 질 때가 있습니다. 이길 가능성이 낮은 사건이라도 그 사건이 세상의 벽을 조금이라도 
-                흔들 수 있는 의미 있는 사건이라면, 저희는 도전하고 당당히 부딪힙니다.
+              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-muted-foreground" style={{ lineHeight: '1.8' }}>
+                때로는 법원의 벽이 높게 느껴질 때도 있습니다. 하지만 그 벽 너머에 의뢰인의 새로운 삶이 기다리고 있다면, 디딤돌은 결코 포기하지 않고 정면으로 마주하겠습니다.
               </p>
             </motion.div>
 
@@ -112,72 +92,17 @@ export function Story() {
               className="w-20 h-0.5 opacity-20"
               style={{ backgroundColor: 'var(--noble-navy)' }}
             />
-          </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="lg:col-span-5 relative"
-          >
-            <div className="relative aspect-[3/4] lg:aspect-[4/5] w-full max-w-md mx-auto lg:ml-auto">
-              <div 
-                className="absolute inset-0 border-2 translate-x-4 translate-y-4 opacity-10"
-                style={{ borderColor: 'var(--noble-navy)' }}
-              />
-              <div 
-                className="absolute inset-0 border translate-x-2 translate-y-2 opacity-20"
-                style={{ borderColor: 'var(--noble-navy)' }}
-              />
-              
-              <div
-                className="relative w-full h-full overflow-hidden"
-                style={{ backgroundColor: 'var(--noble-beige)' }}
+            <motion.div variants={itemVariants} className="pt-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-noble-navy text-white font-medium rounded-full transition-all duration-300 hover:bg-noble-navy/90 hover:gap-4 hover:shadow-xl group"
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <div 
-                      className="w-20 h-20 mx-auto rounded-full border-2 flex items-center justify-center opacity-30"
-                      style={{ borderColor: 'var(--noble-navy)' }}
-                    >
-                      <svg
-                        className="w-10 h-10"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        viewBox="0 0 24 24"
-                        style={{ color: 'var(--noble-navy)' }}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                        />
-                      </svg>
-                    </div>
-                    <p
-                      className="text-sm font-light tracking-wide opacity-40"
-                      style={{ color: 'var(--noble-navy)' }}
-                    >
-                      법무사 사진
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  className="absolute inset-0 opacity-5"
-                  style={{
-                    background: 'linear-gradient(135deg, transparent 0%, var(--noble-navy) 100%)',
-                  }}
-                />
-              </div>
-            </div>
-
-            <div 
-              className="absolute -top-8 -left-4 text-8xl font-serif opacity-5 pointer-events-none hidden lg:block"
-              style={{ color: 'var(--noble-navy)' }}
-            >
-              &ldquo;
-            </div>
-          </motion.div>
+                <span className="text-base tracking-wide">상담 시작하기</span>
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </motion.div>
+          </div>
         </div>
       </motion.div>
     </section>
