@@ -208,7 +208,7 @@ Wave 3 (Integration & Cleanup):
   **Commit**: YES
   - Message: `feat(ui): implement contact section with validation`
 
-- [ ] 5. Assemble Page & Final QA
+- [x] 5. Assemble Page & Final QA
 
   **What to do**:
   - Update `src/app/page.tsx` to import and arrange the 3 sections.
