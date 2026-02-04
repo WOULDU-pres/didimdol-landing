@@ -75,10 +75,10 @@ export function Hero() {
             </div>
 
             <h1 className="opacity-0 animate-fade-in-up animation-delay-400">
-              <span className="block text-[2rem] md:text-6xl lg:text-7xl font-serif font-bold text-noble-navy leading-[1.15] tracking-tight">
+              <span className="block text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-noble-navy leading-[1.15] tracking-tight">
                 무거운 짐,
               </span>
-              <span className="block text-[2rem] md:text-6xl lg:text-7xl font-serif font-bold text-noble-navy leading-[1.15] tracking-tight mt-2">
+              <span className="block text-[1.75rem] md:text-5xl lg:text-6xl font-serif font-bold text-noble-navy leading-[1.15] tracking-tight mt-2">
                 함께 내려놓겠습니다
               </span>
             </h1>
